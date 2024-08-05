@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="terms">
+      <div class="terms__container">
+        <h1>Contact Us</h1>
+        <div class="border"></div>
+        <form action="#" class="contact-form">
+          <div class="contact-form__main">
+            <div class="contact-form__title">Enter your details</div>
+            <label for="name">First Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            />
+            <label for="email"> Email </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your best email"
+            />
+            <button type="submit" class="contact-form__button">Submit</button>
+            <div class="contact-form__desc">
+              We will never spam you. Your details are safe with us.
+            </div>
+          </div>
+          <div class="contact-form__message">Thank you!</div>
+        </form>
+      </div>
+    </section>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var form = document.querySelector(".contact-form");
+      var formMain = document.querySelector(".contact-form__main");
+      var formMessage = document.querySelector(".contact-form__message");
+
+      formMessage.style.display = "none";
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        formMain.style.display = "none";
+        formMessage.style.display = "flex";
+      });
+    });
+  </script>
+</html>
